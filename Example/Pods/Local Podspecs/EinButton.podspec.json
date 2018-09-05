@@ -1,0 +1,27 @@
+{
+  "name": "EinButton",
+  "version": "1.0.0",
+  "summary": "Simply customable add to cart button with UIView",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/theamorn/EinButton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Amorn Apichattanakul": "benamorn@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/theamorn/EinButton.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "EinButton/Classes/**/*",
+  "resource_bundles": {
+    "EinButton": [
+      "EinButton/Assets/*.xcassets"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EinButton_Example' do
+  pod 'EinButton', :path => '../'
+
+  target 'EinButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
