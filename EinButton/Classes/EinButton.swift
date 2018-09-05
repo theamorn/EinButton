@@ -123,11 +123,8 @@ extension EinButtonDelegate {
         let extendedBounds = bounds.insetBy(dx: -padding, dy: -padding)
         return extendedBounds.contains(point)
     }
-}
-
-private extension EinButton {
     
-    func setup() {
+    private func setup() {
         title.textColor = titleTextColor
         title.textAlignment = .center
         title.text = buttonLabel
@@ -138,18 +135,18 @@ private extension EinButton {
         let bundlePath = Bundle(url: bundle!)
         iconImage = UIImage(named: "trash", in: bundlePath, compatibleWith: nil)
         minusButton.setImage(iconImage, for: .normal)
-
+        
         tap = UITapGestureRecognizer(target: self, action: #selector(addItemToCart(_:)))
         tap?.cancelsTouchesInView = false
         addGestureRecognizer(tap!)
     }
-
-    @objc func addItemToCart(_ gesture: UITapGestureRecognizer) {
+    
+    @objc private func addItemToCart(_ gesture: UITapGestureRecognizer) {
         if #available(iOS 10.0, *) {
             let generator = UIImpactFeedbackGenerator(style: .light)
             generator.impactOccurred()
         }
-
+        
         if isAllowToAddMore {
             setItemToCart(with: 1)
             delegate?.valueDidChanged(to: 1)
@@ -158,7 +155,7 @@ private extension EinButton {
         }
     }
     
-    func setItemToCart(with numberItems: Int) {
+    private func setItemToCart(with numberItems: Int) {
         removeAllGestures()
         
         let buttonWidth = frame.size.width / 2 - Constant.margin
@@ -177,14 +174,14 @@ private extension EinButton {
         plusButton.addTarget(self, action: #selector(valueDidChanged(_:)), for: .touchUpInside)
     }
     
-    func removeAllGestures() {
+    private func removeAllGestures() {
         guard let gestures = gestureRecognizers else { return }
         for recognizer in gestures {
             removeGestureRecognizer(recognizer)
         }
     }
     
-    @objc func valueDidChanged(_ sender: UIButton) {
+    @objc private func valueDidChanged(_ sender: UIButton) {
         if #available(iOS 10.0, *) {
             let generator = UIImpactFeedbackGenerator(style: .light)
             generator.impactOccurred()
