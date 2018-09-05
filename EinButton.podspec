@@ -10,16 +10,14 @@ Pod::Spec.new do |s|
   s.name             = 'EinButton'
   s.version          = '1.0.0'
   s.summary          = 'Simply customable add to cart button with UIView'
-
+  s.swift_version    = '4.0'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'This library is used for button to add item in cart, when you click at the button, it will show up minus, plus, and image button'
 
   s.homepage         = 'https://github.com/theamorn/EinButton'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
