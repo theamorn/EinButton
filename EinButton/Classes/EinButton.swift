@@ -19,9 +19,9 @@ public protocol EinButtonDelegate: class {
 
 /// Optional delegate
 extension EinButtonDelegate {
-    func cannotAddMoreItem() {}
-    func didTapPlus() {}
-    func didTapMinus() {}
+    public func cannotAddMoreItem() {}
+    public func didTapPlus() {}
+    public func didTapMinus() {}
 }
 
 @IBDesignable open class EinButton: UIView {
@@ -29,7 +29,7 @@ extension EinButtonDelegate {
     private var minusButton = UIButton()
     private var plusButton = UIButton()
     private var tap: UITapGestureRecognizer?
-    private var isAllowToAddMore = true
+    public var isAllowToAddMore = true
     
     private enum Constant {
         static let margin: CGFloat = 10.0

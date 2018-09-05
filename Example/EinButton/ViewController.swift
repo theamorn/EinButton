@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         addCartButtonByCode.iconImage = UIImage(named: "ic_trash")
         addCartButtonByCode.titleTextColor = .white
         addCartButtonByCode.delegate = self
+        addCartButtonByCode.isAllowToAddMore = false
         view.addSubview(addCartButtonByCode)
 
         addCartButtonByView.delegate = self
