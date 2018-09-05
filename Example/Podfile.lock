@@ -1,0 +1,16 @@
+PODS:
+  - EinButton (1.0.0)
+
+DEPENDENCIES:
+  - EinButton (from `../`)
+
+EXTERNAL SOURCES:
+  EinButton:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EinButton: 30f275abc20b5bfaf2bb6437c018e424f7b24893
+
+PODFILE CHECKSUM: 04008763ea6b73c2f8b621af3711261fefa9bc88
+
+COCOAPODS: 1.5.3

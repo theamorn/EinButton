@@ -1,0 +1,6 @@
+framework module EinButton {
+  umbrella header "EinButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
