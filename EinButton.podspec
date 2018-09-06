@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EinButton'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Simply customable add to cart button with UIView'
   s.swift_version    = '4.0'
 # This description is used to generate tags and improve search results.
